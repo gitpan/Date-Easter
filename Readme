@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE>Date::Easter - Calculates Easter for any given year</TITLE>
+<LINK REV="made" HREF="mailto:root@localhost.localdomain">
+</HEAD>
+
+<BODY>
+
+<!-- INDEX BEGIN -->
+
+<UL>
+
+	<LI><A HREF="#NAME">NAME</A>
+	<LI><A HREF="#SYNOPSIS">SYNOPSIS</A>
+	<LI><A HREF="#DESCRIPTION">DESCRIPTION</A>
+	<LI><A HREF="#AUTHOR">AUTHOR</A>
+	<LI><A HREF="#To_Do">To Do</A>
+	<LI><A HREF="#Other_Comments">Other Comments</A>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="NAME">NAME</A></H1>
+<P>
+Date::Easter - Calculates Easter for any given year
+
+<P>
+<HR>
+<H1><A NAME="SYNOPSIS">SYNOPSIS</A></H1>
+<P>
+<PRE>  use Date::Easter;
+  ($month, $day) = easter(1947);
+  ($month, $day) = julian_easter(1987);
+</PRE>
+<P>
+<HR>
+<H1><A NAME="DESCRIPTION">DESCRIPTION</A></H1>
+<P>
+Calculates Easter for a given year.
+
+<P>
+<HR>
+<H1><A NAME="AUTHOR">AUTHOR</A></H1>
+<P>
+Rich Bowen &lt;<A
+HREF="mailto:rbowen@rcbowen.com">rbowen@rcbowen.com</A>&gt;
+
+<P>
+<HR>
+<H1><A NAME="To_Do">To Do</A></H1>
+<P>
+Clearly, this should automatically select the right calculation method,
+based on the year that you enter. I'm actually not sure why I did not do it
+that way the first time. That should be in the next version.
+
+<P>
+And, of course, I need to put some real tests in test.pl
+
+<P>
+<HR>
+<H1><A NAME="Other_Comments">Other Comments</A></H1>
+<P>
+Yes, Date::Manip already has code in it to do this. But Date::Manip is very
+big, and rather slow. I needed something faster and smaller, and did not
+need all that other stuff. And I have a real interest in date calculations,
+so I thought this would be fun. Date::Manip is a very cool module. I use it
+myself.
+
+</BODY>
+
+</HTML>
