@@ -1,7 +1,8 @@
 lib/Date/Easter.pm
 MANIFEST
 Makefile.PL
-Readme
+README
+ChangeLog
 LICENSE
 
 t/00basics.t

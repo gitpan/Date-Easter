@@ -1,4 +1,4 @@
-# $Header: /home/cvs/date-easter/lib/Date/Easter.pm,v 1.13 2001/08/22 12:41:26 rbowen Exp $
+# $Header: /home/cvs/date-easter/lib/Date/Easter.pm,v 1.14 2002/08/29 23:49:59 rbowen Exp $
 package Date::Easter;
 
 =head1 NAME
@@ -30,7 +30,7 @@ require Exporter;
 
 @ISA     = qw( Exporter );
 @EXPORT  = qw( julian_easter gregorian_easter orthodox_easter easter );
-$VERSION = (qw'$Revision: 1.13 $')[1];
+$VERSION = (qw'$Revision: 1.14 $')[1];
 
 =pod
 
@@ -179,29 +179,3 @@ orthodox_easter function.
 The tests are taken from a table at
 http://www.chariot.net.au/~gmarts/eastcalc.htm
 
-# CVS history {{{
-
-=head2 Change Log
-
-    $Log: Easter.pm,v $
-    Revision 1.13  2001/08/22 12:41:26  rbowen
-    Moved module into lib so that it would actually install.
-
-    Revision 1.12  2001/08/04 02:36:43  rbowen
-    Added ToDo item to Easter.pm
-
-    Revision 1.11  2001/07/12 03:39:51  rbowen
-    Added tests. Updated documentation.
-
-    Revision 1.10  2001/07/12 03:07:58  rbowen
-    Documentation update, mostly, and some code cleanup.
-
-    Revision 1.4  2001/04/20 02:09:09  rbowen
-    Brought documentation, README, up to date with code.
-
-    Revision 1.3  2001/04/20 01:50:17  rbowen
-    Added orthodox_easter method.
-
-=cut
-
-# }}}
