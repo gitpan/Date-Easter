@@ -3,7 +3,7 @@ use ExtUtils::MakeMaker;
 # the contents of the Makefile that is written.
 WriteMakefile(
     'NAME'	=> 'Date::Easter',
-    'VERSION_FROM' => 'Date/Easter.pm', # finds $VERSION
+    'VERSION_FROM' => 'lib/Date/Easter.pm', # finds $VERSION
     'PREREQ_PM' => {
         Test::More => 0,
     },

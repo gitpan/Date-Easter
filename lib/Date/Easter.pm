@@ -1,4 +1,4 @@
-# $Header: /home/cvs/date-easter/Date/Easter.pm,v 1.12 2001/08/04 02:36:43 rbowen Exp $
+# $Header: /home/cvs/date-easter/lib/Date/Easter.pm,v 1.13 2001/08/22 12:41:26 rbowen Exp $
 package Date::Easter;
 
 =head1 NAME
@@ -30,7 +30,7 @@ require Exporter;
 
 @ISA     = qw( Exporter );
 @EXPORT  = qw( julian_easter gregorian_easter orthodox_easter easter );
-$VERSION = (qw'$Revision: 1.12 $')[1];
+$VERSION = (qw'$Revision: 1.13 $')[1];
 
 =pod
 
@@ -92,6 +92,8 @@ Gregorian calendar, which is what most of the world uses.
 
 sub easter { return gregorian_easter(@_); }
 
+# sub orthodox_easter {{{
+
 =head2 orthodox_easter
 
     ( $month, $day ) = orthodox_easter( $year );
@@ -134,6 +136,7 @@ sub orthodox_easter {
     }
     return ( $month, $easter );
 }
+#}}}
 
 sub dow { ( localtime( timelocal( 0, 0, 0, $_[0], $_[1] - 1, $_[2] ) ) )[6] }
 
@@ -176,9 +179,14 @@ orthodox_easter function.
 The tests are taken from a table at
 http://www.chariot.net.au/~gmarts/eastcalc.htm
 
+# CVS history {{{
+
 =head2 Change Log
 
     $Log: Easter.pm,v $
+    Revision 1.13  2001/08/22 12:41:26  rbowen
+    Moved module into lib so that it would actually install.
+
     Revision 1.12  2001/08/04 02:36:43  rbowen
     Added ToDo item to Easter.pm
 
@@ -196,3 +204,4 @@ http://www.chariot.net.au/~gmarts/eastcalc.htm
 
 =cut
 
+# }}}
