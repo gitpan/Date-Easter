@@ -1,15 +1,15 @@
 package Date::Easter;
 
 use strict;
-use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
+use vars qw($VERSION @ISA @EXPORT);
 
 require Exporter;
 
 @ISA = qw(Exporter AutoLoader);
 @EXPORT = qw(
-	julian_easter easter
+	julian_easter gregorian_easter easter
 );
-$VERSION = '1.00';
+$VERSION = '1.01';
 
 sub julian_easter	{
 	my ($year) = @_;
@@ -25,7 +25,7 @@ sub julian_easter	{
 	return ($month, $day);
 }
 
-sub easter	{
+sub gregorian_easter	{
 	my ($year) = @_;
 	my ($G, $C, $H, $I, $J, $L,
 		$month, $day,
@@ -42,6 +42,12 @@ sub easter	{
 	return ($month, $day);
 }
 
+sub easter	{
+	my ($year) = @_;
+	my ($month, $day) = gregorian_easter($year);
+	return ($month, $day);
+}
+
 1;
 
 __END__
@@ -53,12 +59,16 @@ Date::Easter - Calculates Easter for any given year
 =head1 SYNOPSIS
 
   use Date::Easter;
-  ($month, $day) = easter(1947);
-  ($month, $day) = julian_easter(1987);
+  ($month, $day) = julian_easter(1752);
+  ($month, $day) = easter(1753);
+  ($month, $day) = gregorian_easter(1753);
 
 =head1 DESCRIPTION
 
 Calculates Easter for a given year.
+
+easter() is, for the moment, an alias to gregorian_easter(), since
+that's what most people use now.
 
 =head1 AUTHOR
 
@@ -66,12 +76,12 @@ Rich Bowen <rbowen@rcbowen.com>
 
 =head1 To Do
 
-Clearly, this should automatically select the right calculation
-method, based on the year that you enter. I'm actually not
-sure why I did not do it that way the first time. That should
-be in the next version.
+I need to put some real tests in test.pl
 
-And, of course, I need to put some real tests in test.pl
+Since the dates that various countries switched to the Gregorian
+calendar vary greatly, it's hard to figure out when to use
+which method. Perhaps some sort of locale checking would be
+cool?
 
 =head1 Other Comments
 
@@ -80,5 +90,8 @@ is very big, and rather slow. I needed something faster and
 smaller, and did not need all that other stuff. And I have a real
 interest in date calculations, so I thought this would be fun.
 Date::Manip is a very cool module. I use it myself.
+
+See also http://www.pauahtun.org/CalendarFAQ/cal/node3.html
+for more details on calculating Easter.
 
 =cut
