@@ -4,4 +4,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'	=> 'Date::Easter',
     'VERSION_FROM' => 'Easter.pm', # finds $VERSION
+    'PREREQ_PM' => {
+        Test::More => 0,
+    },
 );

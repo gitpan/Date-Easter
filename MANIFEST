@@ -1,6 +1,9 @@
-Changes
 Easter.pm
 MANIFEST
 Makefile.PL
-test.pl
 Readme
+
+t/00basics.t
+t/01gregorian.t
+t/02orthodox.t
+
