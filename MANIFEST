@@ -1,7 +1,8 @@
-Easter.pm
+Date/Easter.pm
 MANIFEST
 Makefile.PL
 Readme
+LICENSE
 
 t/00basics.t
 t/01gregorian.t

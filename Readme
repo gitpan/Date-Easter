@@ -60,6 +60,11 @@ To Do
     as to the difference between the Orthodox Easter and the Julian Easter.
     I need to read some more.
 
+    The use of localtime and timelocal locks us into the epoch, which is a
+    rather silly limitation. Need to move to Date::DayOfWeek or other module
+    to calculate the day of the week. This should immediately make the
+    module usable back to the beginning of celebration of Easter.
+
 Other Comments
     Yes, Date::Manip already has code in it to do this. But Date::Manip is
     very big, and rather slow. I needed something faster and smaller, and
@@ -78,9 +83,9 @@ Other Comments
 
   Change Log
 
-        $Log: Readme,v $
-        Revision 1.4  2001/07/12 03:40:12  rbowen
-        Readme in sync with POD
+        Revision 1.12  2001/08/04 02:36:43  rbowen
+        Added ToDo item to Easter.pm
+        Added LICENSE
 
         Revision 1.11  2001/07/12 03:39:51  rbowen
         Added tests. Updated documentation.

@@ -1,4 +1,4 @@
-# $Header: /home/cvs/date-easter/Easter.pm,v 1.11 2001/07/12 03:39:51 rbowen Exp $
+# $Header: /home/cvs/date-easter/Date/Easter.pm,v 1.12 2001/08/04 02:36:43 rbowen Exp $
 package Date::Easter;
 
 =head1 NAME
@@ -30,7 +30,7 @@ require Exporter;
 
 @ISA     = qw( Exporter );
 @EXPORT  = qw( julian_easter gregorian_easter orthodox_easter easter );
-$VERSION = (qw'$Revision: 1.11 $')[1];
+$VERSION = (qw'$Revision: 1.12 $')[1];
 
 =pod
 
@@ -154,6 +154,11 @@ I need to test the Julian easter calculations, but I'm a little
 confused as to the difference between the Orthodox Easter and the
 Julian Easter. I need to read some more.
 
+The use of localtime and timelocal locks us into the epoch, which is a
+rather silly limitation. Need to move to Date::DayOfWeek or other
+module to calculate the day of the week. This should immediately make
+the module usable back to the beginning of celebration of Easter.
+
 =head1 Other Comments
 
 Yes, Date::Manip already has code in it to do this. But Date::Manip
@@ -174,6 +179,9 @@ http://www.chariot.net.au/~gmarts/eastcalc.htm
 =head2 Change Log
 
     $Log: Easter.pm,v $
+    Revision 1.12  2001/08/04 02:36:43  rbowen
+    Added ToDo item to Easter.pm
+
     Revision 1.11  2001/07/12 03:39:51  rbowen
     Added tests. Updated documentation.
 
