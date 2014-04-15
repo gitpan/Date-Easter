@@ -1,4 +1,4 @@
-# $Header: /home/cvs/date-easter/lib/Date/Easter.pm,v 1.14 2002/08/29 23:49:59 rbowen Exp $
+# $Header: /cvsroot/date-easter/lib/Date/Easter.pm,v 1.15 2003/04/21 03:23:29 rbowen Exp $
 package Date::Easter;
 
 =head1 NAME
@@ -30,7 +30,7 @@ require Exporter;
 
 @ISA     = qw( Exporter );
 @EXPORT  = qw( julian_easter gregorian_easter orthodox_easter easter );
-$VERSION = (qw'$Revision: 1.14 $')[1];
+$VERSION = '1.20';
 
 =pod
 
@@ -178,4 +178,9 @@ orthodox_easter function.
 
 The tests are taken from a table at
 http://www.chariot.net.au/~gmarts/eastcalc.htm
+
+The script 'easter' is just a simple way to find out when easter falls
+in a given year. Type 'easter' to find easter for this year, and 'easter
+1983' to find when easter falls in 1983.
+
 

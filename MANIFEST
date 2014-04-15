@@ -9,3 +9,5 @@ t/00basics.t
 t/01gregorian.t
 t/02orthodox.t
 
+bin/easter
+

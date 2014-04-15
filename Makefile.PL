@@ -9,4 +9,6 @@ WriteMakefile(
     },
     AUTHOR => 'Rich Bowen (rbowen@rcbowen.com)',
     ABSTRACT => 'Calculate the date of Easter',
+
+    EXE_FILES => [ 'bin/easter' ],
 );

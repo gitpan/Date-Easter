@@ -18,28 +18,24 @@ DESCRIPTION
     Date::Easter provides the following functions:
 
   julian_easter
-
         ( $month, $day ) = julian_easter( $year );
 
     Returns the month and day of easter in the given year, in the Julian
     calendar.
 
   gregorian_easter
-
         ( $month, $day ) = gregorian_easter( $year );
 
     Returns the month and day of easter in the given year, in the Gregorian
     calendar, which is what most of the world uses.
 
   easter
-
         ( $month, $day ) = easter( $year );
 
     Returns the month and day of easter in the given year, in the Gregorian
     calendar, which is what most of the world uses.
 
   orthodox_easter
-
         ( $month, $day ) = orthodox_easter( $year );
 
     Returns the month and day of easter in the given year, in the Orthodox
@@ -80,4 +76,8 @@ Other Comments
 
     The tests are taken from a table at
     http://www.chariot.net.au/~gmarts/eastcalc.htm
+
+    The script 'easter' is just a simple way to find out when easter falls
+    in a given year. Type 'easter' to find easter for this year, and 'easter
+    1983' to find when easter falls in 1983.
 
