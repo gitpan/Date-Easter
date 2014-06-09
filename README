@@ -11,9 +11,8 @@ SYNOPSIS
 DESCRIPTION
     Calculates Easter for a given year.
 
-    easter() is, for the moment, an alias to gregorian_easter(), since
-    that's what most people use now. The thought was to somehow know which
-    of the other methods to call, that that proved to be rather sticky.
+    easter() is simply an alias to gregorian_easter(), since that's what
+    almost every country in the world currently uses.
 
     Date::Easter provides the following functions:
 
@@ -48,25 +47,17 @@ AUTHOR
     Rich Bowen <rbowen@rcbowen.com>
 
 To Do
-    Since the dates that various countries switched to the Gregorian
-    calendar vary greatly, it's hard to figure out when to use which method.
-    Perhaps some sort of locale checking would be cool?
-
-    I need to test the Julian easter calculations, but I'm a little confused
-    as to the difference between the Orthodox Easter and the Julian Easter.
-    I need to read some more.
-
     The use of localtime and timelocal locks us into the epoch, which is a
     rather silly limitation. Need to move to Date::DayOfWeek or other module
     to calculate the day of the week. This should immediately make the
     module usable back to the beginning of celebration of Easter.
 
 Other Comments
-    Yes, Date::Manip already has code in it to do this. But Date::Manip is
-    very big, and rather slow. I needed something faster and smaller, and
-    did not need all that other stuff. And I have a real interest in date
-    calculations, so I thought this would be fun. Date::Manip is a very cool
-    module. I use it myself.
+    Note that Date::Manip also has code to do this, and you should
+    probably use that module instead. This module was written as an
+    academic exercise, since I an intrigued by calendrical calculations.
+    On the other hand, Date::Manip is huge, so you might want to use
+    this for that consideration. YMMV.
 
     See also http://www.pauahtun.org/CalendarFAQ/cal/node3.html for more
     details on calculating Easter.

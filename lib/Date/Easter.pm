@@ -30,7 +30,7 @@ require Exporter;
 
 @ISA     = qw( Exporter );
 @EXPORT  = qw( julian_easter gregorian_easter orthodox_easter easter );
-$VERSION = '1.20';
+$VERSION = '1.21';
 
 =pod
 
